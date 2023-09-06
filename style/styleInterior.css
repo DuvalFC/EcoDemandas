@@ -1,0 +1,733 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+body {
+  overflow-x: hidden;
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.navegacion {
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: #c2c5a4;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.navegacion ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navegacion ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+}
+.navegacion ul li:hover {
+  background-color: #5c6600;
+}
+.navegacion ul li:nth-child(1) {
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+.navegacion ul li:nth-child(1):hover {
+  background: transparent;
+}
+.navegacion ul li:nth-child(7) {
+  left: 35px;
+  bottom: -290px;
+}
+.navegacion ul li:nth-child(7):hover {
+  background: transparent;
+}
+#logo {
+  height: 30px;
+  padding-left: 40px;
+}
+.navegacion ul li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: #28220b;
+}
+.navegacion ul li a .icono {
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  padding-top: 2px;
+  line-height: 60px;
+  text-align: center;
+}
+.navegacion ul li a .icono ion-icon {
+  color: #28220bcc;
+  font-size: 24px;
+}
+.navegacion ul li a .titulo {
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+.main {
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: #f5f5f5;
+  transition: 0.5s;
+}
+
+.main .barraSuperior {
+  width: 100%;
+  background: #28220b;
+  height: 60%;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.barra {
+  display: flex;
+  position: relative;
+  width: auto;
+  height: 5px;
+  align-items: center;
+  color: #c2c5a4;
+  padding: 10px;
+}
+.busqueda {
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+.busqueda label {
+  position: relative;
+  width: 100%;
+}
+.busqueda label input {
+  width: 100%;
+  height: 40px;
+  border-radius: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  outline: none;
+  border: 1px soid rgb(194, 197, 164, 0.2);
+}
+.busqueda label ion-icon {
+  position: absolute;
+  left: 15px;
+  top: 4px;
+}
+.usuario {
+  position: relative;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.usuario img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*-------------------------------------------------------------------*/
+
+.cuerpo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.cuerpo .publicacion {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #28220b;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 10px;
+  margin-bottom: 8px;
+  background: #f5f5f5;
+  gap: 10px;
+}
+
+.cuerpo .publicacion .info{
+  width: 760px;
+}
+.cuerpo .publicacion .info b {
+  color: #5c6600;
+}
+.cuerpo .publicacion .info a {
+  text-decoration: none;
+}
+.cuerpo .publicacion .info a:hover {
+  text-decoration: underline #5c6600;
+}
+.cuerpo .publicacion .info h2 {
+  color: #28220b;
+}
+.cuerpo .publicacion .info p {
+  color: #5c6600;
+}
+.cuerpo .publicacion .imgPerfil {
+  position: relative;
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px groove #c2c5a4;
+}
+.cuerpo .publicacion .imgPerfil img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cuerpo .publicacion .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.cuerpo .publicacion .icon li {
+  list-style: none;
+  font-size: 1.5em;
+  color: #c2c5a4;
+  margin: 0 10px;
+  display: inline-block;
+}
+/*----------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 12px;
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #c2c5a4;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5c6600;
+  border-radius: 6px;
+}
+/*----------------------------------------------*/
+.lectura {
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  gap: 20px;
+  min-height: 90vh;
+  color: #28220b;
+}
+.lectura .titulo_{
+  width: 980px;
+}
+.lectura .titulo_ p {
+  margin-bottom: 10px;
+}
+.lectura .titulo_ p b {
+  color: #c2c5a4;
+}
+.lectura .titulo_ h1 {
+  font-size: 30px;
+}
+.cabecera_{
+  display: flex;
+  gap: 20px;
+  border-bottom: 2px solid #c2c5a4;
+
+}
+.iconos_{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.iconos_ li{
+  list-style: none;
+}
+.iconos_ li a {
+  font-size: 2em;
+  color: #c2c5a4;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.iconos_ li a:hover {
+  transform: translateY(-10px);
+}
+
+footer .menu li a:hover {
+  opacity: 1;
+}
+/*-------------------------------------------------*/
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.perfil-usuario {
+  background: linear-gradient(#c2c5a4, transparent);
+  color: #28220b;
+}
+
+.perfil-usuario .sombra {
+  position: absolute;
+  display: block;
+  background: linear-gradient(transparent, #28220b);
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+}
+.perfil-usuario .portada-perfil,
+.perfil-usuario .sombra {
+  border-radius: 0 0 20px 20px;
+}
+.perfil-usuario img {
+  width: 100%;
+}
+.contenedor-perfil {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.perfil-usuario .contenedor-perfil {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+.perfil-usuario .portada-perfil {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 20rem;
+  margin-bottom: 0.5rem;
+}
+.perfil-usuario .avatar-perfil {
+  display: block;
+  width: 230px;
+  height: 230px;
+  background-color: #d9dcf1;
+  position: absolute;
+  bottom: -65px;
+  left: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #ffffff;
+  box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.2);
+}
+.perfil-usuario .avatar-perfil img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.perfil-usuario .datos-perfil {
+  position: absolute;
+  display: block;
+  width: calc(100% - 230px - 8rem);
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+}
+.perfil-usuario .titulo-usuario {
+  font-size: 2.3rem;
+  white-space: nowrap;
+  margin-bottom: 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.perfil-usuario .bio-usuario {
+  font-size: 1em;
+  margin-bottom: 0.75rem;
+}
+.perfil-usuario .lista-perfil {
+  list-style: none;
+}
+.perfil-usuario .lista-perfil li {
+  display: inline-block;
+  font-size: 1em;
+  margin-right: 1rem;
+}
+
+.perfil-usuario .opcciones-perfil {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+}
+.perfil-usuario .opcciones-perfil button {
+  border: 0;
+  padding: 8px 20px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+}
+.perfil-usuario .menu-perfil ul {
+  display: flex;
+  list-style: none;
+  margin-left: calc(200px + 8rem);
+  width: calc(100% - 200px - 8rem);
+}
+.perfil-usuario .menu-perfil ul li {
+  margin-right: 1rem;
+}
+.perfil-usuario .menu-perfil a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all ease-in 100ms;
+}
+.perfil-usuario .menu-perfil a:hover {
+  background-color: #4cb0c6;
+  color: #fff;
+}
+.perfil-usuario .icono-perfil {
+  display: none;
+  margin-right: 0.75rem;
+}
+/*---------------------------------------*/
+.perfil-usuario {
+  position: relative;
+}
+.perfil-usuario-footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  background: radial-gradient(transparent, #c2c5a4);
+  border-radius: 15px;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.perfil-usuario-footer .lista-datos {
+  width: 50%;
+  list-style: none;
+}
+
+.perfil-usuario-footer .lista-datos li {
+  padding: 5px 0;
+}
+
+.perfil-usuario-footer .lista-datos li > .icono {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+/*-----------------------------------------*/
+.perfil-usuario#con.active {
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+#modal {
+  position: fixed;
+  top: 40%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  visibility: visible;
+  opacity: 0;
+  transition: 0.5s;
+}
+#modal.active {
+  top: 320px;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+/*---------------------------------------------*/
+
+.form-register {
+  width: 400px;
+  background: #c2c5a4;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  color: #28220b;
+  box-shadow: 0 5px 30px rgb(0, 0, 0, 0.3);
+}
+
+.form-register h2 {
+  position: absolute;
+  font-size: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 8px;
+  border: 1px solid #5c6600;
+  font-size: 12px;
+  color: #28220b;
+}
+
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.form-register a {
+  position: relative;
+  left: 330px;
+  bottom: 29px;
+  color: #5c6600;
+  text-decoration: none;
+}
+.form-register a ion-icon {
+  position: absolute;
+  font-size: 40px;
+}
+
+.form-register a:hover {
+  color: #28220b;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #28220b;
+  border: none;
+  padding: 12px;
+  color: #f5f5f5;
+  margin: 16px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+.form-register .botons:hover {
+  color: #5c6600;
+}
+.portada_ {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 110px;
+  top: 50px;
+  border-radius: 0 0 20px 20px;
+  border-top: 2px solid #28220b;
+}
+
+.portada_ .editarPortada {
+  display: block;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: 0;
+  padding: 0px 6px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: #f5f5f5;
+}
+.otro {
+  position: relative;
+}
+.otro .file {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.usuario_ {
+  position: relative;
+  min-width: 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  left: 20px;
+  border: 2px solid #f5f5f5;
+  color: #f5f5f5;
+}
+.usuario_ #image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.usuario_ .cambiar-foto {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 57%;
+  bottom: 0;
+  left: 0;
+  color: #f5f5f5;
+  text-decoration: none;
+  transform: translateY(50%);
+  opacity: 0;
+  transition: all ease-in 200ms;
+}
+.usuario_ .cambiar-foto ion-icon {
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+.usuario_ .cambiar-foto #file {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+.usuario_:hover .cambiar-foto {
+  transform: translateY(0);
+  opacity: 1;
+  color: #f5f5f5;
+}
+
+/*--------------------------------------*/
+.login__title {
+  margin-top: 5px;
+  font-size: 25px;
+  color: #28220b;
+}
+.ajustes-contenedor {
+  margin-top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-top: 1px solid #5c6600;
+}
+.ajustes {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+.login__box {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.5rem;
+  padding: 1.125rem 1rem;
+  background-color: #fff;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.login__icon {
+  font-size: 1.5rem;
+  color: #5c6600;
+}
+
+.login__input,
+.login__textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  font-size: 0.938rem;
+  font-weight: 700;
+  color: #28220b;
+}
+
+.login__input::placeholder,
+.login__textarea::placeholder {
+  font-size: 0.938rem;
+  color: #c0c0c0;
+}
+.login__button {
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: #5c6600;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+.login__button:hover {
+  background-color: #4a5201;
+}
+
+.contenedor_publicacion {
+  width: 150vh;
+}
+.publicacion_ {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+/*---------------------------------*/
+.resultado {
+  position: absolute;
+  color: #f5f5f5;
+  background: #5c6600;
+  text-align: center;
+  width: 100%;
+  padding: 2px;
+  
+}
+.resultado h3{
+  margin: 0;
+}
